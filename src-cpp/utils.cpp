@@ -559,7 +559,7 @@ v8::Local<v8::Value> javaArrayToV8(Java *java, JNIEnv *env, jobjectArray objArra
     return v8::Int32Array::New(ab, 0, arraySize);
 #else
     for (jsize i = 0; i < arraySize; i++) {
-      result->Set(i, Nan::New<v8::Integer>(elems[i]));
+      result->Set(i, Nan::New<v8::Integer>(static_cast<int32_t>(elems[i])));
     }
     env->ReleaseIntArrayElements((jintArray)objArray, elems, 0);
 #endif
