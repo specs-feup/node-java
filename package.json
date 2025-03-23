@@ -1,7 +1,7 @@
 {
-  "name": "java",
+  "name": "@specs-feup/java",
   "description": "Bridge API to connect with existing Java APIs.",
-  "author": "Joe Ferner <joe@fernsroth.com>",
+  "author": "Luís Sousa",
   "keywords": [
     "java",
     "jvm",
@@ -13,17 +13,17 @@
   },
   "maintainers": [
     {
-      "name": "Joe Ferner",
-      "email": "joe@fernsroth.com"
+      "name": "Luís Sousa",
+      "email": "lm.sousa@fe.up.pt"
     }
   ],
   "bugs": {
-    "url": "https://github.com/joeferner/node-java/issues"
+    "url": "https://github.com/specs-feup/node-java/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joeferner/node-java.git"
+    "url": "https://github.com/specs-feup/node-java.git"
   },
   "dependencies": {
     "find-java-home": "^2.0.0",
