@@ -91,6 +91,12 @@ public class Test {
     return b;
   }
 
+  public static byte[] staticByteArray(byte[] arg) {
+    byte[] b = new byte[arg.length];
+    for(int i=0; i<arg.length; i++) { b[i] = arg[i]; }
+    return b;
+  }
+
   public static class SuperClass {
     public int getVal() { return 3; }
   }
