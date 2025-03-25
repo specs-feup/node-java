@@ -1,20 +1,21 @@
 name: master
 on:
   push:
-    branches:
-      - master
+  workflow_dispatch:
+
 jobs:
   unit-test:
     name: Unit Test
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        nodeVersion: [ 18, 20, 22 ]
+        nodeVersion: [ 18, 20, 22, latest ]
         jdkVersion: [ openjdk9, openjdk10, openjdk11, openjdk21 ]
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.nodeVersion }}
       - name: npm ci
